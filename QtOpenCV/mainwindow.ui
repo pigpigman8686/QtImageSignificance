@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>628</width>
+      <height>392</height>
+     </rect>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>600</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="topHorizontalLayout">
+      <item>
+       <widget class="QLabel" name="inputLabel">
+        <property name="text">
+         <string>输入图片位置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="inputLineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inputPushButton">
+        <property name="text">
+         <string>浏览</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inputLineClear">
+        <property name="text">
+         <string>清除</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="filterTypeGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>600</width>
+       <height>73</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Filter Type</string>
+     </property>
+     <widget class="QRadioButton" name="medianBlurRadioButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>89</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Median Blur</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="gaussianBlurRradioButton">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>40</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gaussion Blur</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>600</width>
+       <height>112</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="bottomHorizontalLayout">
+      <item>
+       <widget class="QLabel" name="outputLabel">
+        <property name="text">
+         <string>输出图片位置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="outputLineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="outputPushButton">
+        <property name="text">
+         <string>浏览</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="outputGenerate">
+        <property name="text">
+         <string>生成</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCheckBox" name="displayImageCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>300</y>
+       <width>600</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Display image after saving</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>850</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menunew">
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuwindows">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="actionphotoInfo"/>
+   </widget>
+   <addaction name="menunew"/>
+   <addaction name="menuwindows"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_3">
+   <property name="windowTitle">
+    <string>图片信息</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <widget class="ImageBaseInfo" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>161</width>
+       <height>242</height>
+      </rect>
+     </property>
+     <property name="autoScroll">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="StatusBar" name="statusBar"/>
+  <action name="actionphotoInfo">
+   <property name="text">
+    <string>图片信息窗口</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ImageBaseInfo</class>
+   <extends>QTableView</extends>
+   <header location="global">imagebaseinfo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusBar</class>
+   <extends>QStatusBar</extends>
+   <header location="global">statusbar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
