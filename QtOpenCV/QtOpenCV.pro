@@ -38,8 +38,17 @@ INCLUDEPATH += C:\Users\MHD\Desktop\opencv-build\install\include
                C:\Users\MHD\Desktop\opencv-build\install\include\opencv
                C:\Users\MHD\Desktop\opencv-build\install\include\opencv2
 
+INCLUDEPATH += C:\Users\MHD\AppData\Local\Programs\Python\Python37\include
+
 # LIBS += D:\OpenCV\opencv-3.4.13-build\lib\libopencv_*.a
 LIBS += C:\Users\MHD\Desktop\opencv-build\lib\libopencv_*.a
+LIBS += -LC:\Users\MHD\AppData\Local\Programs\Python\Python37\libs\
+-l_tkinter\
+-lpython3\
+-lpython37
 
 RESOURCES += \
     Resources.qrc
+
+DISTFILES += \
+    mypython.py
