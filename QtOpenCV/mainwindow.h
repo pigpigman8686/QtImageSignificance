@@ -15,15 +15,13 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-signals:
-    void SendImage(QString name, int width, int height, int hor, int ver, int channels, bool type);
 
 private slots:
-    void on_inputPushButton_clicked();
-    void on_outputPushButton_pressed();
-    void on_inputLineClear_clicked();
-
-    void on_outputGenerate_clicked();
+    void on_PhotoLocationButton_clicked();
+    void on_PhotoLocationClear_clicked();
+    void on_GenButton_clicked();
+    void on_TrueMaskButton_clicked();
+    void on_TrueMaskClear_clicked();
 
 protected:
     void closeEvent(QCloseEvent *event);

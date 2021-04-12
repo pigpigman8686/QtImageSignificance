@@ -35,8 +35,9 @@ int main(int argc, char *argv[])
     PyArg_Parse(pyValue, "d", &d);
     qDebug() << d;
     Py_Finalize();
-8/
-    /*
+*/
+
+/*
     Py_Initialize();
     //如果初始化失败，返回
     if(!Py_IsInitialized())
@@ -67,6 +68,8 @@ int main(int argc, char *argv[])
     //退出
     Py_Finalize();
 */
+    Py_Initialize();
+    Py_Finalize();
 
     return a.exec();
 }
